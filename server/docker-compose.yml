@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  moss-server:
+    build: .
+    container_name: moss-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - HOST=0.0.0.0
+      - CORS_MODE=*
+      - DB_PATH=/app/data/moss.db
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - QWEN_API_KEY=${QWEN_API_KEY}
+      - GLM_API_KEY=${GLM_API_KEY}
+      - COPILOT_TOKEN=${COPILOT_TOKEN}
+      - JWT_SECRET=${JWT_SECRET:-moss-secret-key}
+    volumes:
+      - moss-data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  moss-data:
+    driver: local

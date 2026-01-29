@@ -1,0 +1,89 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.settings/
+.classpath
+
+# Android
+android/.gradle/
+android/local.properties
+android/gradle.properties
+android/key.properties
+android/*.jks
+android/app/debug/
+android/app/profile/
+android/app/release/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/Flutter/flutter_export_environment.sh
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Web
+web/.dart_tool/
+
+# macOS
+*.dmg
+*.DS_Store
+
+# Windows
+*.exe
+*.dll
+
+# Go Server
+server/bin/
+server/.air.toml
+server/tmp/
+server/*.log
+
+# Environment files
+.env
+.env.*
+*.env
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+*.lcov
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# Misc
+*.swp
+*.swo
+*~
+.cache/
+tmp/
